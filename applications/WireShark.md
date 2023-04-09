@@ -8,7 +8,7 @@ Wireshark is a network protocol analysis application which lets you see what's h
 -   QA engineers use it to _verify network applications_
 -   Developers use it to _debug protocol implementations_
 -   People use it to _learn network protocol_ internals
-![WireShark](assets/images/wireshark_mainscreen.png)
+![WireShark](../assets/images/wireshark_mainscreen.png)
 
 
 ## Filtering:
@@ -35,10 +35,10 @@ A digital certificate is used for SSL/TLS encryption of HTTPS traffic. When view
 
 We can find this TLS handshake information within a PCAP file to identify what domain's the device has made contact with by filtering out all other information other than the TLS certificate by using "tls.handshake.type eq 11" will find any successful tls handshakes which have sent over their certifactes to the device found within the PCAP. 
 
-![TLS handshake example](assets/images/tls_handshake.png)
+![TLS handshake example](../assets/images/tls_handshake.png)
 
 By opening up the Transport Layer Security -> TLS -> Handshake Protocol -> Certificate -> signedCertificate you can view the who the issuer is and also what the domain name is by opening up the subject up. As shown in the below image which shows the fully expanded tree to gather the desired certifacte and the domain which the device has successfully connected to. 
-![TLS Certifacte example](assets/images/tls_certificate_example.png)
+![TLS Certifacte example](../assets/images/tls_certificate_example.png)
 
 You can also filter by certain TCP/UDP port to find more targeted 
 
