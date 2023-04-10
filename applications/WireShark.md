@@ -42,7 +42,7 @@ By opening up the Transport Layer Security -> TLS -> Handshake Protocol -> Certi
 
 You can also filter by certain TCP/UDP port to find more targeted set of information. tcp.port only looks at the TCP traffic and udp.port does exactly the same for UDP traffic. 
 ```
-tcp.port == PORT NUMBER || udp.port == PORT NUMBER
+tcp.port == PORT_NUMBER || udp.port == PORT_NUMBER
 ```
 
 Filtering for only http traffic or ClientHello handshakes over TLS while also not showing ssdp traffic from and to the web server. 
