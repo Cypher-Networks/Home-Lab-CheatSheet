@@ -40,8 +40,15 @@ We can find this TLS handshake information within a PCAP file to identify what d
 By opening up the Transport Layer Security -> TLS -> Handshake Protocol -> Certificate -> signedCertificate you can view the who the issuer is and also what the domain name is by opening up the subject up. As shown in the below image which shows the fully expanded tree to gather the desired certifacte and the domain which the device has successfully connected to. 
 ![TLS Certifacte example](../assets/images/tls_certificate_example.png)
 
-You can also filter by certain TCP/UDP port to find more targeted 
+You can also filter by certain TCP/UDP port to find more targeted set of information. tcp.port only looks at the TCP traffic and udp.port does exactly the same for UDP traffic. 
+```
+tcp.port == PORT NUMBER || udp.port == PORT NUMBER
+```
 
+Filtering for only http traffic or ClientHello handshakes over TLS while also not showing ssdp traffic from and to the web server. 
+```
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+```
 
 
 ### Further resources on WireShark
