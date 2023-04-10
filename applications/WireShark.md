@@ -50,9 +50,17 @@ Filtering for only http traffic or ClientHello handshakes over TLS while also no
 (http.request or tls.handshake.type eq 1) and !(ssdp)
 ```
 
+### Extracting files
+Once an analyst has access to a PCAP which has indications of a device which has downloaded a file from an unknown source they have the ability to extract any files seen within the PCAP by going to File -> Export Objects -> http. 
+
+![File Objects](../assets/images/fileObject.png)
+
+Once doing this a seperate window will pop-up which will look like the below. This will allow an analyst to see the file name, downloaded from, content type, size and packet number in which the download process started. 
+
+![HTTP files](../assets/images/httpfiles.png)
+
 
 ### Further resources on WireShark
 1. [Wireshark documentation](https://wireshark.org/docs/)
 	1. [Single document](https://www.wireshark.org/docs/wsug_html/)
 2. [PCAP file of Dridex infection](https://github.com/pan-unit42/wireshark-tutorial-Dridex-traffic)
-3. 
